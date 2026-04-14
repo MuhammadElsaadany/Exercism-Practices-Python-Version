@@ -1,0 +1,13 @@
+def steps(number):
+    steps_counter = 0
+    if number <= 0:
+        raise ValueError("Only positive integers are allowed")
+    else:
+        while not number == 1:
+            if number % 2 == 0:
+                number = number // 2
+                steps_counter += 1
+            else:
+                number = number * 3 + 1
+                steps_counter += 1
+    return steps_counter
